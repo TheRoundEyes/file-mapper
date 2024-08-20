@@ -2,7 +2,11 @@ import streamlit as st
 import base64
 import pandas as pd
 
-st.set_page_config(layout='wide')
+st.set_page_config(layout='wide',page_title='File Mapper',page_icon=':pencil:')
+
+st.title('File Mapper')
+st.write('This app allows you to upload two files and merge them based on a common column. This app was made for our developers to use to easily map data between two files.')
+
 
 def get_base64_of_pdf(file):
     return base64.b64encode(file.read()).decode()
